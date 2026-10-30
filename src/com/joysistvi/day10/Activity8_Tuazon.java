@@ -30,24 +30,16 @@ public class Activity8_Tuazon {
     }
     System.out.println("Sum = " + sum);
 
-//    float ave = (float) sum / SIZE;
     System.out.println("Average = " + ((float) sum / SIZE));
 
-    // To be continue...
     int highest = nums[0];
     int lowest = nums[0];
     for(int i = 0; i < SIZE; i++) {
-      System.out.println(i < (SIZE-1));
-      System.out.println(SIZE-1);
-      System.out.println(i);
-      if((i+1) < (SIZE-1)) {
-        if(nums[i] > nums[i+1]) {
-          highest = nums[i];
-        } else {
-          lowest = nums[i];
-        }
-      }
+      highest = Math.max(highest, nums[i]);
+      lowest = Math.min(lowest, nums[i]);
     }
+
+    System.out.println();
 
     System.out.println("Highest Number: " + highest);
     System.out.println("Lowest Number: " + lowest);
